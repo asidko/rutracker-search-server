@@ -1,0 +1,24 @@
+{
+  "name": "tsearchservices",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2",
+    "consul": "^0.34.1",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "fs-extra": "^7.0.1",
+    "node-cache": "^4.2.0",
+    "node-fetch": "^2.3.0",
+    "puppeteer": "^1.12.2",
+    "yaml-config": "^0.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
