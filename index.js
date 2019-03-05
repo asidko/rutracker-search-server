@@ -53,8 +53,9 @@ async function run() {
         await page.goto("https://rutracker.org/forum/tracker.php");
 
         // Do search
-        await page.type('#search-text', queryText);
-        await page.evaluate(() => document.querySelector('#search-submit').click());
+        await page.type('#title-search', queryText);
+        await page.select('#o', '10'); // sort by seeders
+        await page.evaluate(() => document.querySelector('#tr-submit-btn').click());
         await page.waitForNavigation();
 
         // Get values
@@ -66,7 +67,7 @@ async function run() {
                     return {
                         title: titleElement.innerText,
                         id: titleElement.dataset.topic_id,
-                        size: sizeElement.innerText.replace(/\W/g, '')
+                        size: sizeElement.innerText.replace(/[^\w.]/g, '')
                     }
                 })
         );
